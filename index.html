@@ -1,0 +1,194 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Side A / Side B Post Analysis</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: one narrow proposal column; each point is a bold line with a ⤶ follow-up. Deliberately single-theme: white paper, black ink. */
+:root {
+  --bg: #ffffff;
+  --ink: #000000;
+  --muted: #4a4a4a;
+  --line: #e2e2e2;
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 18px; line-height: 1.6; }
+.wrap { max-width: 720px; margin: 0 auto; padding-block: 64px 88px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 64px; }
+h1, h2 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; color: var(--ink); }
+h1 { font-size: clamp(2.1rem, 5.5vw, 3.2rem); }
+h2 { font-size: clamp(1.5rem, 3.4vw, 2rem); }
+p { margin: 0; }
+.eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+header, section { display: grid; gap: 20px; }
+.lede { color: var(--muted); font-size: 1.15rem; max-width: 60ch; }
+.split { height: 2px; background: var(--ink); width: 64px; }
+
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+.points li { display: grid; gap: 2px; }
+.points strong { font-size: 1.12rem; }
+.points .ret { display: grid; grid-template-columns: 1.6em 1fr; color: var(--muted); }
+.points .ret::before { content: "⤶"; color: var(--ink); font-weight: 700; transform: scaleX(-1); display: inline-block; width: 1em; }
+
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+figure { margin: 0; display: grid; gap: 10px; align-content: start; min-width: 0; }
+figure img { width: 100%; border: 1px solid var(--line); display: block; }
+figcaption { font-size: 0.92rem; color: var(--muted); }
+.tag { justify-self: start; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border: 1px solid var(--ink); }
+.tag.before { background: var(--bg); color: var(--ink); }
+.tag.after { background: var(--ink); color: var(--bg); }
+
+.posts { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+.post { border: 1px solid var(--line); padding: 22px; display: grid; gap: 14px; min-width: 0; }
+.post.mine { border-color: var(--ink); }
+.post pre { white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--body); font-size: 0.95rem; line-height: 1.55; margin: 0; color: var(--ink); }
+.post .who { font-size: 0.9rem; color: var(--muted); }
+.post .who b { color: var(--ink); }
+.big { font-family: var(--display); font-size: clamp(1.4rem, 3vw, 1.85rem); line-height: 1.3; text-wrap: balance; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); padding-block: 28px; }
+.big em { font-style: italic; }
+
+.offer { border: 1px solid var(--ink); padding: 28px; display: grid; gap: 20px; }
+.close { display: grid; gap: 12px; }
+.close p { color: var(--muted); }
+footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 20px; }
+@media (max-width: 640px) {
+  .compare, .posts { grid-template-columns: 1fr; }
+  .wrap { gap: 52px; padding-block: 40px 64px; }
+  .offer { padding: 20px; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Post analysis · Patrick R. Coyle, MBA · "Side A / Side B"</span>
+    <h1>Strong idea. The post needed to show it.</h1>
+    <p class="lede">A look at what held the original post back, the full rewrite next to the original, and the reasoning behind each change.</p>
+    <div class="split" aria-hidden="true"></div>
+  </header>
+
+  <section>
+    <span class="eyebrow">Where engagement is getting lost</span>
+    <ul class="points">
+      <li><strong>The hook gets buried.</strong><span class="ret">A dense paragraph follows the first line, so readers never tap "…see more".</span></li>
+      <li><strong>The pitch comes too early.</strong><span class="ret">The sessions are sold before the reader feels the problem.</span></li>
+      <li><strong>The graphic looks like an ad.</strong><span class="ret">Buttons, a URL footer and small text on navy. People have learned to scroll past that.</span></li>
+      <li><strong>The image repeats the post.</strong><span class="ret">It gives no new reason to stop and look.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="eyebrow">Same message, two ways</span>
+    <div class="compare">
+      <figure>
+        <span class="tag before">Current</span>
+        <img src="original.webp" alt="Current navy slide-style graphic with headline, four-step strip, buttons and website footer">
+        <figcaption>Repeats the post. Reads as an ad.</figcaption>
+      </figure>
+      <figure>
+        <span class="tag after">My version</span>
+        <img src="infographic.webp" alt="Infographic of a vinyl record split into green Side A and blue Side B with a patient at the centre and seven numbered points">
+        <figcaption>Explains the post. Reads as an insight.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">The full post, before and after</span>
+    <div class="posts">
+      <div class="post">
+        <span class="tag before">Current</span>
+        <p class="who"><b>Patrick R. Coyle, MBA</b> · original post</p>
+<pre>Side A counts the patients. Side B prices the same patients.
+
+Commercial and Finance describe the same event in two languages and neither team hears the other one. A lost patient is an access problem on one side of the house and a forecast miss on the other. They are the same patient, and until both rooms can say so in the same words, the number keeps missing.
+
+Side A counts. Side B prices the same figures.
+
+Twelve sessions across both sides get you an understanding of:
+
+→ The same commercial event, named once by Commercial and once by Finance
+→ Where the 10 Exits of Therapy™ and the 5 Layers of GTN™ meet, exit by exit and layer by layer
+→ Why an assumption that holds in one function breaks the number in another
+→ A shared vocabulary, so the cross-functional conversation can start above the definitions
+
+Tell us which two teams in your organization describe the same miss differently. We will show you where their words diverge.
+
+Start with the first session of either side, on us: https://lnkd.in/eFu_u-aU
+See the curriculum: https://lnkd.in/ehxdh_UR
+
+#GrossToNet #Commercialization #PatientAccess #PharmaFinance #LifeSciences</pre>
+      </div>
+      <div class="post mine">
+        <span class="tag after">My version</span>
+        <p class="who"><b>Patrick R. Coyle, MBA</b> · rewritten post</p>
+<pre>Side A counts the patients.
+Side B prices the same patients.
+
+Most organizations never notice they're talking about one person.
+
+When a patient drops off, Commercial calls it an access problem.
+Finance calls it a forecast miss.
+
+Same event. Same patient. Two languages.
+
+And neither room hears the other one.
+
+So each team works on its own version of the problem, and the number keeps missing. It will keep missing until both rooms can describe that patient in the same words.
+
+That's what the twelve sessions across Side A and Side B are built for. You come away understanding:
+
+➡️ One event, two names
+↳ The same commercial event, named once by Commercial and once by Finance.
+
+➡️ Where the two frameworks meet
+↳ The 10 Exits of Therapy™ and the 5 Layers of GTN™, matched exit by exit and layer by layer.
+
+➡️ The assumption that breaks downstream
+↳ Why something that holds in one function can break the number in another.
+
+➡️ A shared vocabulary
+↳ So the cross-functional conversation starts above the definitions, not stuck inside them.
+
+Side A counts. Side B prices the same figures.
+
+Which two teams in your organization describe the same miss differently?
+
+Tell us, and we'll show you where their words diverge.
+
+Better Access. Better Outcomes. Better Business.™</pre>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Why I made these changes</h2>
+    <ul class="points">
+      <li><strong>I put the hook on its own lines.</strong><span class="ret">So the opening survives the "…see more" cut-off instead of disappearing into a paragraph.</span></li>
+      <li><strong>I added a concrete scene.</strong><span class="ret">"Commercial calls it an access problem. Finance calls it a forecast miss." Readers recognise their own meetings.</span></li>
+      <li><strong>I moved the problem ahead of the sessions.</strong><span class="ret">The reader feels why the number keeps missing before the offer appears.</span></li>
+      <li><strong>I gave each bullet a short label.</strong><span class="ret">"One event, two names" is easy to scan. The detail sits underneath.</span></li>
+      <li><strong>I ended on a question.</strong><span class="ret">"Which two teams describe the same miss differently?" gives people a reason to comment.</span></li>
+      <li><strong>I took the links out of the post.</strong><span class="ret">They can go in the first comment, where they don't limit how many people see the post.</span></li>
+      <li><strong>I built the image around one picture.</strong><span class="ret">A record split into Side A and Side B, with the patient at the centre. The image explains the post instead of repeating it.</span></li>
+      <li><strong>I numbered the points around the record.</strong><span class="ret">Readers follow 1 to 7, so they spend longer on the post.</span></li>
+      <li><strong>I left out buttons and URLs.</strong><span class="ret">Without them, the image reads as an insight rather than an ad.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Why consistency matters</h2>
+    <p>One good post helps. A consistent look across every post helps more.</p>
+    <ul class="points">
+      <li><strong>Use the same brand colours every time.</strong><span class="ret">People start to recognise the post as yours before they read the name.</span></li>
+      <li><strong>Keep one style of image or infographic.</strong><span class="ret">The same layout and illustration style, post after post, becomes a signature people remember.</span></li>
+      <li><strong>Recognition builds trust.</strong><span class="ret">When followers know what a post from you looks like, they stop scrolling for it and expect it to be worth their time.</span></li>
+    </ul>
+  </section>
+
+  <footer>Post analysis for Patrick R. Coyle, MBA · NextGen GTN™ · November 2026</footer>
+</div>
+
+</body></html>
